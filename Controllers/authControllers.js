@@ -38,7 +38,7 @@ authController.login = async (req, res) => {
 
     const token = jwt.sign(
       { userId: user._id, role: user.role ? user.role.nom : null },
-      process.env.JWT_SECRET,
+      "mySecretKey123!@#",
       { expiresIn: "7d" }
     );
 

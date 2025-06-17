@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path"); // <-- Ajouté ici
-const serverless = require("serverless-http");
 
 const authRoutes = require("./routes/authRoutes");
 const roleRoutes = require("./routes/roleRoutes");
@@ -33,4 +32,4 @@ app.use("/api/user", userRoutes);
 app.use("/api/investissement", investmentRoutes);
 app.use("/api/admin", adminRoutes);
 
-module.exports = serverless(app);
+module.exports = app;
